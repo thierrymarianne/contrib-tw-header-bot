@@ -3,8 +3,7 @@
 
 ![banner](images/banner.png)
 
-
-## How to setup for your Twitter
+## How to set up for your Twitter?
 
 Add a '.env' file and insert these lines:
 
