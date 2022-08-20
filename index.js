@@ -6,8 +6,6 @@ const { TwitterClient } = require("twitter-api-client");
 const axios = require("axios");
 const sharp = require("sharp");
 const fs = require("fs");
-// to bypass heroku port issue
-const http = require("http");
 
 const twitterClient = new TwitterClient({
   apiKey: process.env.API_KEY,
