@@ -13,7 +13,7 @@ const twitterClient = new TwitterClient({
   apiKey: process.env.API_KEY,
   apiSecret: process.env.API_SECRET,
   accessToken: process.env.ACCESS_TOKEN,
-  accessTokenSecret: process.env.ACCESS_SECRET,
+  accessTokenSecret: process.env.ACCESS_TOKEN_SECRET,
 });
 
 /**
