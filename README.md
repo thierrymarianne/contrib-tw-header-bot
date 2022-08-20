@@ -1,8 +1,6 @@
-# Twitter Header Bot
+# 🤖 Twitter Bot Header
 
-![banner](images/banner.png)
-
-## How to set up for your Twitter
+## Configuration
 
 Add a '.env' file and insert these lines
 
