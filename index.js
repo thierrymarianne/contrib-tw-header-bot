@@ -161,9 +161,9 @@ async function process_image(url, image_path) {
 async function draw_image(image_data) {
   try {
 
-    await sharp("twitter-banner.png")
+    await sharp("./images/twitter-header-template.png")
       .composite(image_data)
-      .toFile("new-twitter-banner.png");
+      .toFile("./images/twitter-header-altered.png");
 
     upload_banner(image_data);
   } catch (error) {
@@ -173,7 +173,7 @@ async function draw_image(image_data) {
 
 async function upload_banner(files) {
   try {
-    const base64 = fs.readFileSync("new-twitter-banner.png", {
+    const base64 = fs.readFileSync("images/twitter-header-altered.png", {
       encoding: "base64",
     });
     await twitterClient.accountsAndUsers
