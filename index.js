@@ -1,7 +1,7 @@
 
-
 const dotenv = require("dotenv");
 dotenv.config();
+
 const { TwitterClient } = require("twitter-api-client");
 const axios = require("axios");
 const sharp = require("sharp");
@@ -65,18 +65,18 @@ const nextCheckpoint = (int) => {
 
 /**
  * Get followers progress bar
- * @param {number} followersCount 
+ * @param {number} followersCount
  * @returns {string}
  */
 
 const getFollowersProgress = (followersCount) => {
   const prev = previousCheckpoint(followersCount);
   const next = nextCheckpoint(followersCount);
-  
+
   const greenCubes = "🟩".repeat(Math.floor((followersCount - prev) / ((next - prev) / 5)));
   const yellowCube = (followersCount - prev) / ((next - prev) / 5) % 1 !== 0 ? "🟨" : "";
   const cubes = (greenCubes + yellowCube).padEnd(10, "⬜️");
-  
+
   return `${abbreviateInt(prev)} ${cubes} ${abbreviateInt(next)} followers`;
 }
 
