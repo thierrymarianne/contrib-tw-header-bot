@@ -112,10 +112,10 @@ async function get_followers() {
     followers.users.forEach((follower, index, arr) => {
       process_image(
         follower.profile_image_url_https,
-        `${follower.screen_name}.png`
+        `./images/avatars/${follower.id}.png`
       ).then(() => {
         const follower_avatar = {
-          input: `${follower.screen_name}.png`,
+          input: `./images/avatars/${follower.id}.png`,
           top: parseInt(`${380 + 300 * index}`),
           left: 3950,
         };
